@@ -68,7 +68,7 @@
 }
 
 .nav {
-    background: var(--ternary-color);
+    background:rgba(0, 0, 0, 0.5);
     border: 1px solid #7D7373;
     padding: 6px 0;
 }
@@ -299,12 +299,15 @@
 
 /* product */
 
+
+
 .product__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 32px;
     font-size: 18px;
+    transition: 0.4s;
 }
 
 @media(max-width: 414px){
@@ -351,6 +354,12 @@
 .product__nav {
     background: rgba(41, 41, 41, 1);
     padding: 21px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 999;
 }
 
 .card__title {
@@ -416,6 +425,60 @@
     opacity: 0;
     transition: 0.4s;
 
+}
+
+@media(max-width:1140px){
+    .forhover::before{
+        left: 35%;
+    }
+}
+
+@media(max-width:1024px){
+    .forhover::before{
+        left: 30%;
+    }
+}
+
+@media(max-width:680px){
+    .forhover::before{
+        top: 35%;
+    }
+}
+
+@media(max-width:636px){
+    .forhover::before{
+        top: 40%;
+        left: 35%;
+    }
+
+}
+
+@media(max-width:636px){
+    .forhover::before{
+        top: 30%;
+        left: 30%;
+    }
+}
+
+@media(max-width:414px){
+    .forhover::before{
+        top: 30%;
+        left: 25%;
+    }
+}
+
+@media(max-width:375px){
+    .forhover::before{
+        top: 40%;
+        left: 40%;
+    }
+}
+
+@media(max-width:320px){
+    .forhover::before{
+        top: 40%;
+        left: 37%;
+    }
 }
 
 .forhover:hover::after {
